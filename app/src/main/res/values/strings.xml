@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">American Buddy</string>
+    <string name="email_text">Email</string>
+    <string name="email_text_hint">Email Address</string>
+    <string name="email_subject_hint">Email Subject</string>
+    <string name="complexity_text">Complexity</string>
+    <string name="data_structure_text">Data Structure</string>
+    <string name="data_structure_spinner_input">Data Structure Spinner</string>
+    <string name="operations_text">Operations</string>
+    <string name="operations_input">Operations Checkboxes</string>
+    <string name="get_min_checkbox_text">Get Min</string>
+    <string name="insert_checkbox_text">Insert</string>
+    <string name="search_checkbox_text">Search</string>
+    <string name="case_text">Case</string>
+    <string name="average_case">Average Case</string>
+    <string name="worst_case">Worst Case</string>
+    <string name="result_text">Result</string>
+    <string name="to_text">To:</string>
+    <string name="subject_text">Subject:</string>
+    <string name="send_mail_text">Send Mail</string>
+    <string name="menu_save_display">Display Result</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_send_intent">Send Mail</string>
+
+    <string name="joke">Slang</string>
+    <string name="menu_add">Add</string>
+    <string name="menu_thumb_up">Display Liked Slangs</string>
+    <string name="menu_thumb_up_down">Display All Slangs</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_cancel">Cancel</string>
+    <string name="title">Title</string>
+    <string name="setup">Slang</string>
+    <string name="punchline">English Meaning</string>
+    <string name="liked">Liked</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="pref_filter">Filter Slangs</string>
+    <string name="pref_filter_summary">Show only liked Slangs on app start up</string>
+    <string name="idConverter">Unit Converter</string>
+
+<!--    <string name="select_a_type">Select a type</string>-->
+    <string name="fahrenheit_celsius">Fahrenheit-Celsius</string>
+    <string name="miles_kilo">Miles-Kilometers</string>
+    <string name="Ounces_Litres">Ounces-Litres</string>
+    <string name="Pounds_kilo">Pounds-Kilo</string>
+
+    <string-array name="unit_dropdown">
+        <item>@string/fahrenheit_celsius</item>
+        <item>@string/miles_kilo</item>
+        <item>@string/Ounces_Litres</item>
+        <item>@string/Pounds_kilo</item>
+    </string-array>
+
+</resources>

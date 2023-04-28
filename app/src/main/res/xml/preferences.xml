@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="dark"
+        android:title="Dark Mode"
+        android:summary="To enable Dark Mode"
+        android:defaultValue="false" />
+    <CheckBoxPreference
+        android:key="swap"
+        android:title="Swap °C/°F"
+        android:summary="Swap the °C/°F display option"
+        android:defaultValue="false" />
+</PreferenceScreen>
+

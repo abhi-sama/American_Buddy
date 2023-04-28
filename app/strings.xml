@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">American Buddy</string>
+    <string name="select_a_type">Select a type</string>
+    <string name="fehrenheit_celsius">Fehrenheit-Celsius</string>
+    <string name="miles_kilo">Miles-Kilometers</string>
+    <string name="Ounces_Litres">Ounces-Litres</string>
+    <string name="Pounds_kilo">Pounds-kilo</string>
+
+    <string-array name="ds_dropdown">
+        <item>@string/select_a_type</item>
+        <item>@string/fehrenheit_celsius </item>
+        <item>@string/miles_kilo </item>
+        <item>@string/Ounces_Litres</item>
+        <item>@string/Pounds_kilo</item>
+    </string-array>
+</resources>

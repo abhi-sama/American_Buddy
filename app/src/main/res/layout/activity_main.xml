@@ -1,0 +1,186 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/background"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:title="@string/app_name"
+        app:titleTextColor="?attr/colorAccent"
+        android:theme="?attr/actionBarTheme"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/enter_city"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="100dp"
+        android:hint="Enter the city name"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        app:layout_constraintStart_toStartOf="@id/idRLHome"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toEndOf="@id/enter_city"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:rippleColor="#00FFFFFF"
+        app:srcCompat="@drawable/city_search" />
+
+    <RelativeLayout
+        android:id="@+id/idRLHome"
+        android:layout_width="fill_parent"
+        android:layout_height="280dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="240dp"
+        android:background="?attr/colorSecondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enter_city" />
+
+    <ImageView
+        android:id="@+id/idRLCondition_Image"
+        android:layout_width="130dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/night"
+        app:layout_constraintEnd_toEndOf="@id/idRLHome"
+        app:layout_constraintTop_toTopOf="@id/idRLHome" />
+
+
+    <TextView
+        android:id="@+id/idTVCurrent_Temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Temp: 7°C/42°F"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="@id/idRLHome"
+        app:layout_constraintTop_toTopOf="@id/idRLHome" />
+
+    <TextView
+        android:id="@+id/idTVFeels_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Feels like: 3°C/36°F"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="@id/idRLHome"
+        app:layout_constraintTop_toBottomOf="@id/idTVCurrent_Temp" />
+
+    <TextView
+        android:id="@+id/idTVTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="11:00 AM"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="@id/idRLHome"
+        app:layout_constraintTop_toBottomOf="@id/idTVCondition" />
+
+    <TextView
+        android:id="@+id/idTVCondition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Sunny"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="@id/idRLHome"
+        app:layout_constraintTop_toBottomOf="@id/idTVFeels_like" />
+
+    <TextView
+        android:id="@+id/idTVDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="31st November,2023"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="@id/idRLHome"
+        app:layout_constraintTop_toBottomOf="@id/idTVTime" />
+
+    <TextView
+        android:id="@+id/idTVLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:text="Middletown,PA,USA"
+        android:textSize="10pt"
+        app:layout_constraintEnd_toEndOf="@id/idRLHome"
+        app:layout_constraintStart_toStartOf="@id/idRLHome"
+        app:layout_constraintTop_toBottomOf="@id/idTVDate" />
+
+
+    />
+    <!--    <TextView-->
+    <!--        android:id="@+id/idTVBack"-->
+    <!--        android:layout_width="fill_parent"-->
+    <!--        android:layout_height="fill_parent"-->
+    <!--        android:background="#494D54"-->
+    <!--        android:layout_marginStart="20dp"-->
+    <!--        android:layout_marginTop="120dp"-->
+    <!--        android:layout_marginBottom="300dp"-->
+    <!--        android:layout_marginEnd="20dp"-->
+    <!--        android:layout_below="@id/enter_city"-->
+    <!--        app:layout_constraintStart_toStartOf= "parent"-->
+
+    <!--        />-->
+
+    <Button
+        android:id="@+id/converter"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:text="Converter"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="@id/idRLHome"
+        app:layout_constraintTop_toBottomOf="@+id/idRLHome" />
+    />
+
+    <Button
+        android:id="@+id/american_slang"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:text="American Slangs"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="@id/idRLHome"
+        app:layout_constraintTop_toBottomOf="@+id/converter" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
