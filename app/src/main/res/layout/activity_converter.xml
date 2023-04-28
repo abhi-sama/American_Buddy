@@ -113,10 +113,10 @@
         />
 
     <Button
-        android:id="@+id/clear"
+        android:id="@+id/unitConvert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Clear"
+        android:text="Convert"
         android:layout_marginTop="250dp"
         android:textSize="10pt"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -126,10 +126,10 @@
         />
 
     <Button
-        android:id="@+id/unitConvert"
+        android:id="@+id/clear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Convert"
+        android:text="Clear"
         android:layout_marginTop="400dp"
         android:textSize="10pt"
         app:layout_constraintBottom_toBottomOf="parent"

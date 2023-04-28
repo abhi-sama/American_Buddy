@@ -9,8 +9,5 @@
         android:icon="@drawable/ic_thumb_up"
         android:title="@string/menu_thumb_up"
         app:showAsAction="ifRoom" />
-    <item android:id="@+id/menu_settings"
-        android:title="@string/menu_settings"
-        app:showAsAction="never" />
-</menu>
+    </menu>
 

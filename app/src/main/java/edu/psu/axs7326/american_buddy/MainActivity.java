@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText city_name;
     private ImageView condition_image;
     private LocationManager location_manager;
-    private FloatingActionButton search_button;
+    private FloatingActionButton search_button,my_location_button;
 
     private Button american_slang_button,converter_button;
     private int PERMISSION_CODE = 1;
@@ -96,7 +96,9 @@ public class MainActivity extends AppCompatActivity {
         city_name=findViewById(R.id.enter_city);
         condition_image=findViewById(R.id.idRLCondition_Image);
         search_button=findViewById(R.id.search_button);
+        my_location_button=findViewById(R.id.current_loc_button);
         american_slang_button=findViewById(R.id.american_slang);
+
         converter_button=findViewById(R.id.converter);
         imageView = findViewById(R.id.idRLCondition_Image);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
@@ -114,6 +116,13 @@ public class MainActivity extends AppCompatActivity {
 //                    else
 //                    getWeatherInfo(arrOfStr[0],arrOfStr[1],"");
                 }
+            }
+        });
+
+        my_location_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                displayWeather();
             }
         });
 
