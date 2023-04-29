@@ -3,11 +3,18 @@
     <!-- Base application theme. -->
     <style name="DarkTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Dark theme -->
+
+
         <item name="colorPrimary">@color/darkColorPrimary</item>
         <item name="colorPrimaryDark">@color/darkColorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="background">@color/darkCardBackground</item>
         <item name="colorSecondary">@color/purple_700</item>
+<!--        <item name="android:textColor">#FFFFFF</item>-->
+        <item name="android:alertDialogTheme">@style/AlertDialogCustom</item>
+
+
+
 
 <!--                <item name="fontFamily">@font/roboto</item>-->
 <!--                <item name="listBackground">@color/darkListBackground</item>-->
@@ -31,6 +38,7 @@
         <item name="colorAccent">#FBFBFB</item>
         <item name="background">@color/white</item>
         <item name="colorSecondary">@color/teal_200</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogCustom</item>
 <!--                <item name="fontFamily">@font/roboto</item>-->
 <!--                <item name="listBackground">@color/lightListBackground</item>-->
         <!--        <item name="cardBackground">@color/lightCardBackground</item>-->
@@ -43,6 +51,20 @@
         <!--        <item name="alertDialogTheme">@style/LightDateAlertDialog</item>-->
         <!--        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>-->
     </style>
+
+
+    <style name="AlertDialogCustom" parent="android:Theme.Material.Light.Dialog.Alert">
+        <item name="android:colorPrimary">#00397F</item>
+        <item name="android:colorAccent">#673AB7</item>
+    </style>
+<!--    <style name="AlertDialogCustom2" parent="android:Theme.Material.Light.Dialog.Alert">-->
+<!--        <item name="colorPrimary">@color/darkColorPrimary</item>-->
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
+<!--        <item name="android:background">@color/darkCardBackground</item>-->
+<!--        <item name="android:textColorPrimary">@color/white</item>-->
+<!--        <item name="android:textColorSecondary">@color/white</item>-->
+<!--    </style>-->
+
 
     <!--    &lt;!&ndash; Windows transition &ndash;&gt;-->
     <!--    <style name="WindowAnimationTransition">-->

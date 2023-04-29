@@ -8,6 +8,10 @@
          android:title="@string/menu_settings"
         android:visible="true"
         app:showAsAction="collapseActionView" />
+    <item android:id="@+id/exit_app"
+        android:title="Exit"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
 <!--    <item android:id="@+id/menu_send_intent"-->
 <!--        android:icon="@drawable/ic_menu_send_intent"-->
 <!--        android:title="@string/menu_send_intent"-->

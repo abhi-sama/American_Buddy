@@ -7,8 +7,10 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.app.LocaleManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -163,12 +165,41 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-                SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                Intent intent = new Intent(this, SettingsActivity.class);
-                startActivity(intent);
+
+        switch (item.getItemId()) {
+            case R.id.exit_app:
+                if(item.getTitle().equals("Exit"))
+                {
+                    showExitDialog();
+                }
                 return true;
+            case R.id.menu_settings:
+                if(item.getTitle().equals("Settings"))
+                {
+                    SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                    Intent intent = new Intent(this, SettingsActivity.class);
+                    startActivity(intent);
+                }
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
 
+        }
+
+    private void showExitDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Exit Application");
+        builder.setMessage("Are you gonna leave me Buddy?");
+        builder.setPositiveButton("Good Bye", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+        });
+        builder.setNegativeButton("Just Kidding", null);
+        builder.show();
+    }
 
     private void displayWeather() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
