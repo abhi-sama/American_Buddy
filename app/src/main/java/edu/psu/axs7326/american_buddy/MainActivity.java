@@ -86,7 +86,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(myToolbar);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
-
         current_temp=findViewById(R.id.idTVCurrent_Temp);
         feels_like=findViewById(R.id.idTVFeels_like);
         current_time=findViewById(R.id.idTVTime);
@@ -103,6 +102,12 @@ public class MainActivity extends AppCompatActivity {
         imageView = findViewById(R.id.idRLCondition_Image);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         displayWeather();
+        if(savedInstanceState!=null)
+        {
+            String text1 = savedInstanceState.getString("City_name");
+            Log.d("life_cycle_oncreateme", text1);
+            city_name.setText(text1);
+        }
         search_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -143,6 +148,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -272,5 +279,23 @@ public class MainActivity extends AppCompatActivity {
         }, error -> Toast.makeText(MainActivity.this,"Please enter valid city name..",Toast.LENGTH_SHORT).show());
         RequestQueue requestQueue = Volley.newRequestQueue(MainActivity.this);
         requestQueue.add(jor);
+    }
+    @Override
+    protected void onPause() {
+        Log.d("life_cycle", "onPause invoked");
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.d("life_cycle", "onStop invoked");
+        super.onStop();
+    }
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        String content1 = city_name.getText().toString();
+        Log.d("life_cycle", content1);
+        savedInstanceState.putString("City_name",content1);
     }
 }

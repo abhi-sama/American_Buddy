@@ -5,8 +5,10 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -43,6 +45,7 @@ public class ConverterActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_converter);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
 //        getSupportActionBar().hide();
@@ -52,10 +55,10 @@ public class ConverterActivity extends AppCompatActivity{
                 R.array.unit_dropdown, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         selected_unit.setAdapter(adapter);
+
         unitConvert = findViewById(R.id.unitConvert);
         clearValue = findViewById(R.id.clear);
         editInput1=(EditText)findViewById(R.id.idEditUnit1);
-//        editInput2=((EditText)findViewById(R.id.idEditUnit2)).getText().toString().trim();
         editInput2=(EditText)findViewById(R.id.idEditUnit2);
         textInput1=(TextView) findViewById(R.id.idUnit1);
         textInput2=(TextView) findViewById(R.id.idUnit2);
@@ -212,10 +215,7 @@ public class ConverterActivity extends AppCompatActivity{
             }
         });
 
-
     }
-
-
 
 
 }
