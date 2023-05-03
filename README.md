@@ -1,4 +1,4 @@
-﻿# American_Buddy
+﻿# American Buddy
 Every year, millions of students from all around the world come to
 the USA for higher education. They must adjust to a completely
 different and diverse cultural life. Among the many adversities they
