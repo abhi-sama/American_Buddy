@@ -12,15 +12,19 @@ milk, currency conversion and measuring distances, to more complex
 tasks such as setting the thermostat in their house. It is difficult for
 them to understand the units and get a sense of measurement.
 
-o The App will help the students in following ways:-
+The App will help the students in following ways:-
+
 i) It provides live weather updates in both Fahrenheit and Celsius
 simultaneously. This helps create a one-to-one mapping in the
 mind between both scales, which aids in developing a sense of
 measurement.
+
 ii) While traveling by car, the app displays the current speed in
 both miles per hour and kilometers per hour simultaneously,
-using the accelerometer and GPS location.(To Be Implemented in Future)
+using the accelerometer and GPS location.(To Be Implemented in Future).
+
 iii)It includes converters for Fahrenheit to Celsius, miles to
 kilometers, ounces to litres, and pounds to kilograms.
+
 iv)It provides a Database list of American Slangs.
 
