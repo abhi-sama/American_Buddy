@@ -11,6 +11,7 @@ from mundane activities such as checking the weather app, buying
 milk, currency conversion and measuring distances, to more complex
 tasks such as setting the thermostat in their house. It is difficult for
 them to understand the units and get a sense of measurement.
+
 o The App will help the students in following ways:-
 i) It provides live weather updates in both Fahrenheit and Celsius
 simultaneously. This helps create a one-to-one mapping in the
